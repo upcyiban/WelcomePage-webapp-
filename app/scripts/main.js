@@ -24,3 +24,11 @@ $('.blurBG').on('click',function () {
   $('.header').removeClass('header-active');
 })
 })
+
+$('.link-son').hide();
+$('.link').on('click',function () {
+  //alert($(this).attr('id'));
+var son = "."+$(this).attr('id')+"-son";
+  //alert(son);
+  $(son).toggle(350);
+})

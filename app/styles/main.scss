@@ -46,6 +46,7 @@ body {
           color: white;
         }
       }
+
       li-active{
         border-bottom: orange solid 3px;
       }
@@ -191,22 +192,31 @@ a:hover {
     width: 100%;
     padding:0;
     li {
-      margin: 0;
+      margin: 0 auto;
       float: left;
       a {
         width: 100%;
         text-align: center;
+
       }
 
     }
+
+    .link-son{
+      background: whitesmoke;
+      overflow: hidden;
+      height:auto;
+      margin-top:1px;
+      margin-bottom:1px;
+
+    }
+
 
   }
 }
 
 .nav {
-
   height: auto;
-
   margin: 0 auto;
   ul {
     margin-left:auto;
@@ -220,10 +230,8 @@ a:hover {
       -o-transition: all 0.5s;
       transition: all 0.5s;
       float: left;
-
       list-style-type: none;
       height: 150px;
-
       background: white;
       box-shadow: gainsboro 1px 1px 50px;
       cursor: pointer;
