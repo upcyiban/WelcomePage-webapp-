@@ -29,27 +29,59 @@ body {
     height: 80px;
     width: 100%;
     background: white;
-    opacity: 0.9;
+    background: rgba(255,255,255,0.9);
     ul{
       width: 100%;
       li{
         width: 6em;
-
         height: 100%;
-        a{
+        .parent{
           padding-top:33px;
           height:47px;
 
         }
-        a:hover{
+        .parent:hover{
           background: deepskyblue;
           color: white;
         }
+        .link-son{
+          //display: none;
+          background: deepskyblue;
+          //background: white;
+          overflow: hidden;
+          height:1em;
+          padding:1em 0 1em 0;
+          margin-bottom:1px;
+          -webkit-transition: all 0.35s;
+          -moz-transition: all 0.35s;
+          -ms-transition: all 0.35s;
+          -o-transition: all 0.35s;
+          transition: all 0.35s;
+          -webkit-transform-origin:0 0;
+          -moz-transform-origin:0 0;
+          -ms-transform-origin:0 0;
+          -o-transform-origin:0 0;
+          transform-origin:0 0;
+          -webkit-transform: scale(1,0);
+          -moz-transform: scale(1,0);
+          -ms-transform: scale(1,0);
+          -o-transform: scale(1,0);
+          transform: scale(1,0);
+        }
+        .link-son:hover{
+          background: white;
+          color: deepskyblue;
+
+        }
       }
 
-      li-active{
-        border-bottom: orange solid 3px;
-      }
+li:hover .link-son{
+  -webkit-transform: scale(1,1);
+  -moz-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  -o-transform: scale(1,1);
+  transform: scale(1,1);
+}
     }
 
   }
@@ -87,6 +119,7 @@ body {
     height: 100%;
     width:55%;
     background: white;
+    overflow: visible;
     -webkit-transform: translate(-120%,0);
     -moz-transform: translate(-120%,0);
     -ms-transform: translate(-120%,0);
@@ -97,18 +130,66 @@ body {
       z-index: 3;
       width:100%;
       padding: 0;
+      overflow: visible;
       //padding-top:10%;
       li{
         width:100%;
-        //border-bottom: 1px solid gainsboro;
         margin:1px 0 1px 0;
         box-shadow: gainsboro  1px 1px 2px ;
-
         height:3em;
+        overflow: visible;
         a{
           padding:1em 0 1em 0;
         }
+        .link-son{
+          background: whitesmoke;
+          overflow: hidden;
+          height:auto;
+          margin-top:1px;
+          margin-bottom:1px;
+          //display: none;
+          background: white;
+          overflow: hidden;
+          height:1em;
+          padding:1em 0 1em 0;
+          border-top:grey 1px;
+          boder-bottom:grey 0px;
+          -webkit-transition: all 0.35s;
+          -moz-transition: all 0.35s;
+          -ms-transition: all 0.35s;
+          -o-transition: all 0.35s;
+          transition: all 0.35s;
+          -webkit-transform: translate(-100%,0);
+          -moz-transform: translate(-100%,0);
+          -ms-transform: translate(-100%,0);
+          -o-transform: translate(-100%,0);
+          transform: translate(-100%,0);
+          opacity: 0;
+        }
+        .parent{
+          position: absolute;
+        }
       }
+      li>.link-son{
+        -webkit-transform: translate(-100%,-200%);
+        -moz-transform: translate(-100%,-200%);
+        -ms-transform: translate(-100%,-200%);
+        -o-transform: translate(-100%,-200%);
+        transform: translate(-100%,-200%);
+      }
+      li:hover .link-son{
+        opacity: 1;
+        background: deepskyblue;
+        -webkit-transform: translate(100%,-200%);
+        -moz-transform: translate(100%,-200%);
+        -ms-transform: translate(100%,-200%);
+        -o-transform: translate(100%,-200%);
+        transform: translate(100%,-200%);
+      }
+      .link-son:hover{
+        color: white;
+      }
+
     }
   }
   .header-active{
@@ -184,7 +265,6 @@ a:hover {
   -ms-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
-
   box-shadow: gainsboro 1px 1px 50px;
   ul {
     margin: 0;
@@ -202,14 +282,7 @@ a:hover {
 
     }
 
-    .link-son{
-      background: whitesmoke;
-      overflow: hidden;
-      height:auto;
-      margin-top:1px;
-      margin-bottom:1px;
 
-    }
 
 
   }
