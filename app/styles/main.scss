@@ -86,7 +86,7 @@ li:hover .link-son{
 
   }
   .nav{
-
+    height: 700px;
     padding-top: 100px;
     width: 1180px;
     ul{
@@ -200,12 +200,15 @@ li:hover .link-son{
     transform: translate(0,0);
   }
   .nav{
-    width: 100%;
-    margin-top:0;
+    height: 1140px;
+    width: 95%;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
     ul{
       width: 100%;
       padding:0;
-      margin-top: 60px;
+      margin-top: 70px;
       li{
         width:100%;
         margin:5px auto;
@@ -289,7 +292,7 @@ a:hover {
 }
 
 .nav {
-  height: auto;
+
   margin: 0 auto;
   ul {
     margin-left:auto;
@@ -308,6 +311,17 @@ a:hover {
       background: white;
       box-shadow: gainsboro 1px 1px 50px;
       cursor: pointer;
+      a{
+        font-size:15px;
+      }
+      a:hover{
+        color: deepskyblue;
+        background:white;
+        display: block;
+        border-radius: 2px;
+        border:deepskyblue solid 1px;
+        //box-shadow: deepskyblue 1px 1px 3px;
+      }
       .liIcon {
         position: relative;
         -webkit-transition: all 0.5s;
@@ -382,17 +396,16 @@ p5{
   }
 
 }
-.footer{
-  position: absolute;
-  bottom: 0;
-  .footer-up{
-
-    height:100px;
-    box-shadow: 1px 1px 10px gainsboro;
-    background: white;
+footer{
+  height:135px;
+  width:100%;
+  background: white;
+  p,h2,h4,h3{
+    text-align: center;
+    margin:0 auto;
   }
-}
 
+}
 .blurBG{
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
